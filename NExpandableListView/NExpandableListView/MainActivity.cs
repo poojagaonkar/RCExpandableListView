@@ -36,7 +36,7 @@ namespace NExpandableListView
             var mList = new List<ExpandListModel>();
             mList.Add(new ExpandListModel { ID = 1, Title = "Level1", Children = null });
             mList.Add(new ExpandListModel { ID = 1, Title = "Level1", Children = new List<ExpandListModel> { new ExpandListModel { ID =2, Title="Level2", Children =null}, new ExpandListModel { ID = 2, Title = "Level2", Children = null } } });
-            mList.Add(new ExpandListModel { ID = 1, Title = "Level1", Children = new List<ExpandListModel> { new ExpandListModel { ID = 2, Title = "Level2", Children = new List<ExpandListModel> { new ExpandListModel { ID = 3, Title = "Level3", Children = null }, new ExpandListModel { ID = 3, Title = "Level3", Children = null } } } } });
+            mList.Add(new ExpandListModel { ID = 1, Title = "Level1", Children = new List<ExpandListModel> { new ExpandListModel { ID = 2, Title = "Level2", Children = new List<ExpandListModel> { new ExpandListModel { ID = 3, Title = "Level3", Children = null }, new ExpandListModel { ID = 3, Title = "Level3", Children = new List<ExpandListModel> { new ExpandListModel { ID = 4, Title = "Level4", Children = null } } } } } } });
             mList.Add(new ExpandListModel { ID = 1, Title = "Level1", Children = null });
 
             return mList;
@@ -94,6 +94,10 @@ namespace NExpandableListView
                     case 3:
                         textLabel.SetBackgroundResource(Android.Resource.Color.HoloOrangeLight);
                         textLabel.TextSize = 50;
+                        break;
+                    case 4:
+                        textLabel.SetBackgroundResource(Android.Resource.Color.HoloPurple);
+                        textLabel.TextSize = 60;
                         break;
                 } 
                 return textLabel;
